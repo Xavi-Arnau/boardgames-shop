@@ -30,7 +30,7 @@ import BoardgamesMenu from "./menu/BoardgamesMenu";
 const Navbar = () => {
   return (
     <div className="bg-black text-white flex justify-center">
-      <NavigationMenu className="hidden md:block p-2">
+      <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-black text-white uppercase">

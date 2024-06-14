@@ -1,6 +1,7 @@
 import CarouselPanel from "@/components/CarouselPanel";
 import CardsPanel from "@/components/CardsPanel";
 import TopSales from "@/components/TopSales";
+import NewAndFeatured from "@/components/NewAndFeatured";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         </div>
       </div>
       <TopSales />
+      <NewAndFeatured />
     </div>
   );
 }
