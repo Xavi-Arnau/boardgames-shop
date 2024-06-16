@@ -29,7 +29,7 @@ import BoardgamesMenu from "./menu/BoardgamesMenu";
 
 const Navbar = () => {
   return (
-    <div className="bg-black text-white flex justify-center">
+    <div className="bg-black text-white flex px-2 md:justify-center">
       <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -80,8 +80,16 @@ const Navbar = () => {
         </DrawerTrigger>
         <DrawerContent className="h-full w-2/3 rounded-none">
           <DrawerHeader>
-            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-            <DrawerDescription>This action cannot be undone.</DrawerDescription>
+            <DrawerTitle>Menu</DrawerTitle>
+            <DrawerDescription>
+              <ul>
+                <li>Marcas</li>
+                <li>Fantasía</li>
+                <li>Sci-fi</li>
+                <li>Històrico</li>
+                <li>Juegos de Mesa</li>
+              </ul>
+            </DrawerDescription>
           </DrawerHeader>
         </DrawerContent>
       </Drawer>

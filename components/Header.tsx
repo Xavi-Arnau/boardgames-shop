@@ -13,9 +13,9 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div>
-      <div className="w-full bg-green-700 p-2 text-white">
+      <div className="hidden md:block w-full bg-green-700 p-2 text-white">
         <div className="w-10/12 mx-auto flex flex-row gap-5 justify-between">
-          <div className="flex flex-row justify-between gap-8 items-center">
+          <div className="flex flex-row md:justify-between gap-8 items-center">
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm">
                 TELÉFONOS

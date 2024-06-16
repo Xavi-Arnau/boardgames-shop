@@ -1,7 +1,8 @@
-import CarouselPanel from "@/components/CarouselPanel";
-import CardsPanel from "@/components/CardsPanel";
-import TopSales from "@/components/TopSales";
-import NewAndFeatured from "@/components/NewAndFeatured";
+import CarouselPanel from "@/components/home/CarouselPanel";
+import CardsPanel from "@/components/home/CardsPanel";
+import TopSales from "@/components/home/TopSales";
+import NewAndFeatured from "@/components/home/NewAndFeatured";
+import ConditionsPanel from "@/components/home/ConditionsPanel";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </div>
       <TopSales />
       <NewAndFeatured />
+      <ConditionsPanel />
     </div>
   );
 }
