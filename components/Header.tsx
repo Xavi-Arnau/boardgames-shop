@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -54,6 +55,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <SearchBar />
       <Navbar />;
     </div>
   );
