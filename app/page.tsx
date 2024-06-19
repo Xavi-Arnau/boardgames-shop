@@ -3,6 +3,7 @@ import CardsPanel from "@/components/home/CardsPanel";
 import TopSales from "@/components/home/TopSales";
 import NewAndFeatured from "@/components/home/NewAndFeatured";
 import ConditionsPanel from "@/components/home/ConditionsPanel";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -16,7 +17,11 @@ export default function Home() {
         </div>
       </div>
       <TopSales />
-      <NewAndFeatured />
+
+      <Suspense fallback={<div>Loading products...</div>}>
+        <NewAndFeatured />
+      </Suspense>
+
       <ConditionsPanel />
     </div>
   );

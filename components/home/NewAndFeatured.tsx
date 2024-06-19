@@ -1,5 +1,5 @@
 import NewAndFeaturedProduct from "./NewAndFeaturedProduct";
-import { Product } from "../types/Product";
+import { Product } from "../types/product";
 
 const NewAndFeatured = async () => {
   async function fetchProducts() {

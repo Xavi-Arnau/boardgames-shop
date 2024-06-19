@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
 import { Eye } from "lucide-react";
-import { Product } from "../types/Product";
+import { Product } from "../types/product";
 
 interface NewAndFeaturedProductProps {
   product: Product;
