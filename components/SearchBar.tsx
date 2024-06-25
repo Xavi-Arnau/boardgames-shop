@@ -34,19 +34,15 @@ const SearchBar = () => {
   return (
     <div className="w-full ">
       <div className="w-10/12 mx-auto flex flex-row justify-between gap-6">
-        <div className="flex w-1/3">
-          <img
-            src="/searchbar/logo-1672213539.jpg"
-            alt=""
-            className="object-fit"
-          />
+        <div className="flex flex-row gap-2 w-1/2">
+          <img src="/searchbar/logo-1672213539.jpg" alt="" className="" />
           <img
             src="/searchbar/personajeGoblin2.png"
             alt=""
-            className="object-fit"
+            className="object-cover"
           />
         </div>
-        <div className="flex w-2/3 gap-2  items-center relative">
+        <div className="flex w-1/2 gap-2  items-center relative">
           <Input
             type="text"
             placeholder="Busca en todo nuestro catálogo"
