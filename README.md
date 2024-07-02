@@ -5,3 +5,4 @@ This project was developed for learning purposes with Next.js, TypeScript, Tailw
 Currently there is functionality for:
 -Search bar
 -Product detail
+-Some search functionality
