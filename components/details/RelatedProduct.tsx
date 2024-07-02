@@ -7,7 +7,7 @@ interface NewAndFeaturedProductProps {
   product: Product;
 }
 
-const NewAndFeaturedProduct = ({ product }: NewAndFeaturedProductProps) => {
+const RelatedProduct = ({ product }: NewAndFeaturedProductProps) => {
   return (
     <div className="w-full md:w-1/6 p-4">
       <div className="border-2 rounded-lg flex flex-col items-center group h-[380px] p-4 hover:scale-110 shadow-lg">
@@ -33,4 +33,4 @@ const NewAndFeaturedProduct = ({ product }: NewAndFeaturedProductProps) => {
   );
 };
 
-export default NewAndFeaturedProduct;
+export default RelatedProduct;

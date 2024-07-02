@@ -10,7 +10,7 @@ const NewAndFeatured = async () => {
 
     const products = await response.json();
 
-    await new Promise((resolve) => setTimeout(resolve, 1000)); //wait 1 second
+    await new Promise((resolve) => setTimeout(resolve, 1000)); //wait 1 second to see the loader do its thing
 
     return products;
   }
