@@ -27,9 +27,10 @@ const ResultsPage = () => {
           Results for: {search}
         </h1>
         <div className="flex flex-col md:flex-row flex-wrap justify-between">
-          {products.map((product: Product) => (
-            <ResultsProduct key={product.name} product={product} />
-          ))}
+          {products &&
+            products.map((product: Product) => (
+              <ResultsProduct key={product.name} product={product} />
+            ))}
         </div>
       </div>
     </div>
