@@ -3,6 +3,7 @@ import ResultsProduct from "@/components/results/ResultsProduct";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Product } from "@/components/types/product";
+import { Suspense } from "react";
 
 const ResultsPage = () => {
   const [products, setProducts] = useState([]);
@@ -21,19 +22,21 @@ const ResultsPage = () => {
   }, []);
 
   return (
-    <div>
-      <div className="w-8/12 mx-auto min-h-[500px]">
-        <h1 className="w-fit p-4 border-2 rounded-lg shadow-lg">
-          Results for: {search}
-        </h1>
-        <div className="flex flex-col md:flex-row flex-wrap justify-between">
-          {products &&
-            products.map((product: Product) => (
-              <ResultsProduct key={product.name} product={product} />
-            ))}
+    <Suspense>
+      <div>
+        <div className="w-8/12 mx-auto min-h-[500px]">
+          <h1 className="w-fit p-4 border-2 rounded-lg shadow-lg">
+            Results for: {search}
+          </h1>
+          <div className="flex flex-col md:flex-row flex-wrap justify-between">
+            {products &&
+              products.map((product: Product) => (
+                <ResultsProduct key={product.name} product={product} />
+              ))}
+          </div>
         </div>
       </div>
-    </div>
+    </Suspense>
   );
 };
 
