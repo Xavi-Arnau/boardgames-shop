@@ -24,7 +24,7 @@ const NewAndFeatured = async () => {
 
         <div className="flex flex-col md:flex-row flex-wrap justify-between">
           {products.map((product: Product) => (
-            <NewAndFeaturedProduct product={product} />
+            <NewAndFeaturedProduct key={product.name} product={product} />
           ))}
         </div>
       </div>

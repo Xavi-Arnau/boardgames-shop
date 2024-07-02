@@ -3,11 +3,11 @@ import { Eye } from "lucide-react";
 import { Product } from "../types/product";
 import Link from "next/link";
 
-interface RelatedProductProps {
+interface ResultsProductProps {
   product: Product;
 }
 
-const RelatedProduct = ({ product }: RelatedProductProps) => {
+const ResultsProduct = ({ product }: ResultsProductProps) => {
   return (
     <div className="w-full md:w-1/6 p-4">
       <div className="border-2 rounded-lg flex flex-col items-center group h-[380px] p-4 hover:scale-110 shadow-lg">
@@ -33,4 +33,4 @@ const RelatedProduct = ({ product }: RelatedProductProps) => {
   );
 };
 
-export default RelatedProduct;
+export default ResultsProduct;

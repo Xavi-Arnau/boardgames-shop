@@ -6,11 +6,13 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import Suggestions from "./search/Suggestions";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [showDropDown, setShowDropDown] = useState(false);
+  const router = useRouter();
 
   const handleChange = async (event: React.FormEvent<HTMLInputElement>) => {
     const search = event.currentTarget.value.toLowerCase();
@@ -30,6 +32,12 @@ const SearchBar = () => {
   const handleClick = (name: string) => {
     setQuery(name);
     setShowDropDown(false);
+  };
+
+  const handleSearchSubmit = () => {
+    setQuery("");
+    setShowDropDown(false);
+    router.push(`/results?search=${query}`);
   };
 
   return (
@@ -60,7 +68,11 @@ const SearchBar = () => {
             onChange={handleChange}
             value={query}
           />
-          <Button type="submit" className="bg-green-700">
+          <Button
+            type="submit"
+            className="bg-green-700"
+            onClick={handleSearchSubmit}
+          >
             <Search />
           </Button>
           {showDropDown ? (

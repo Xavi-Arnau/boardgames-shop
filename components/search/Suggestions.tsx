@@ -13,7 +13,7 @@ const Suggestions = ({ data, handleClick }: SuggestionsProps) => {
   console.log(data);
 
   return (
-    <div className="absolute left-0 top-20 w-full bg-zinc-200 z-20">
+    <div className="absolute left-0 top-20 md:w-full bg-zinc-200 z-20">
       <ul className="">
         {data && data.length
           ? data.map((item, index) => (
