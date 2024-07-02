@@ -1,5 +1,6 @@
 import { Button } from "../ui/button";
 import { Eye } from "lucide-react";
+import Link from "next/link";
 interface TopSalesProductProps {
   img: string;
   title: string;
@@ -15,9 +16,11 @@ const TopSalesProduct = ({ img, title }: TopSalesProductProps) => {
         <div className="text-sm line-through">19,95 €</div>
         <div className="bg-red-500 p-1 rounded-lg text-white text-sm">-59%</div>
       </div>
-      <Button className="md:hidden group-hover:flex bg-green-700">
-        <Eye className="mr-2 h-4 w-4" />
-        Ver más
+      <Button asChild className="md:hidden group-hover:flex bg-green-700">
+        <Link href="/details/test-product">
+          <Eye className="mr-2 h-4 w-4" />
+          Ver más
+        </Link>
       </Button>
     </div>
   );

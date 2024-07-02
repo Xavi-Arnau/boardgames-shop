@@ -22,7 +22,7 @@ const Suggestions = ({ data, handleClick }: SuggestionsProps) => {
                 onClick={() => handleClick(item.name)}
                 key={index}
               >
-                <img src={item.picture} alt="" className="object-fit w-20" />
+                <img src={item.picture} alt="" className="object-cover w-20" />
                 {item.name}
               </li>
             ))

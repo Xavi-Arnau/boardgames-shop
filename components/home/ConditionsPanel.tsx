@@ -60,7 +60,7 @@ const ConditionsPanel = () => {
           <img
             src="/conditions/goblintraderwebmapatiendas2024v2.jpg"
             alt=""
-            className="object-fit w-[500px]"
+            className="object-cover w-[500px]"
           />
         </div>
       </div>

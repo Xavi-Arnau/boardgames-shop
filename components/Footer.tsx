@@ -49,12 +49,16 @@ const Footer = () => {
       <Separator />
       <div className="md:w-10/12 mx-auto flex flex-col items-center">
         <div className="flex flex-row gap-4 items-center py-6">
-          <img src="/payment/paymentvisa.png" alt="" className="object-fit" />
-          <img src="/payment/paymentpaypal.png" alt="" className="object-fit" />
+          <img src="/payment/paymentvisa.png" alt="" className="object-cover" />
+          <img
+            src="/payment/paymentpaypal.png"
+            alt=""
+            className="object-cover"
+          />
           <img
             src="/payment/paymentmastercard.png"
             alt=""
-            className="object-fit"
+            className="object-cover"
           />
         </div>
         <div className="text-slate-400 py-4">
