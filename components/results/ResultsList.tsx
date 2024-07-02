@@ -6,19 +6,23 @@ import { Product } from "@/components/types/product";
 
 const ResultsList = () => {
   const [products, setProducts] = useState([]);
+
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`/api/products/search?query=${search}`);
+      const response = await fetch(`/api/products/search?query=${search}`, {
+        next: { revalidate: 60 },
+      });
       const data = await response.json();
+      console.log("trololo");
 
       setProducts(data);
     };
 
     fetchData();
-  }, []);
+  }, [search]);
 
   return (
     <div>
