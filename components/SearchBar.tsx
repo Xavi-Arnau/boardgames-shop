@@ -107,8 +107,14 @@ const SearchBar = () => {
               <div className="flex flex-col gap-4">
                 {cartItems &&
                   cartItems.map((line) => (
-                    <div className="flex flex-row">
-                      <div className="w-1/3">id:{line.id}</div>
+                    <div className="flex flex-row items-center">
+                      <div className="w-1/3">
+                        <img
+                          src="/detail/shatterpoint-clone-force-99-squad-pack-castellano.jpg"
+                          className="object-cover"
+                          alt=""
+                        />
+                      </div>
                       <div className="w-1/3 ">x{line.quantity}</div>
                       <div className="w-1/3">
                         <Button onClick={() => removeFromCart(line.id)}>
