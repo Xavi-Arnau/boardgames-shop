@@ -1,6 +1,9 @@
+"use client";
+
 import Description from "@/components/details/Description";
 import Gallery from "@/components/details/Gallery";
 import Related from "@/components/details/Related";
+import { CartProvider } from "@/app/context/CartContext";
 
 interface DetailsPageProps {
   params: {
@@ -9,7 +12,7 @@ interface DetailsPageProps {
 }
 
 export default function DetailsPage({ params }: DetailsPageProps) {
-  console.log(params);
+  //console.log(params);
 
   return (
     <div className="w-full">

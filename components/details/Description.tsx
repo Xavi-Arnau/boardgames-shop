@@ -1,12 +1,19 @@
 "use client";
 
 import { Instagram, Facebook, Twitter, ShoppingCart } from "lucide-react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "../ui/button";
+import { CartContext } from "@/app/context/CartContext";
 
 const Description = () => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart, cartItems } = useContext(CartContext);
+
+  const handleAddProduct = () => {
+    addToCart({ id: 2, quantity: quantity });
+  };
+
   return (
     <div className="flex flex-col gap-4 min-h-[50vh]">
       <h1 className="text-green-700 text-3xl font-bold p-4">
@@ -36,7 +43,7 @@ const Description = () => {
           <div className="p-4 w-14 text-center">{quantity}</div>
           <Button onClick={() => setQuantity(quantity + 1)}>+</Button>
         </div>
-        <Button className="flex gap-4">
+        <Button className="flex gap-4" onClick={handleAddProduct}>
           <ShoppingCart />
           Añadir al carrito
         </Button>
